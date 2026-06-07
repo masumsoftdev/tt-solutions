@@ -140,6 +140,7 @@ add_action( 'widgets_init', 'tt_solutions_widgets_init' );
 function tt_solutions_scripts() {
 	wp_enqueue_style( 'tt-solutions-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'tt-solutions-custom',get_template_directory_uri() . '/css/custom.css', array(), _S_VERSION );
+	wp_enqueue_style( 'tt-solutions-responsive',get_template_directory_uri() . '/css/responsive.css', array(), _S_VERSION );
 	wp_style_add_data( 'tt-solutions-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'tt-solutions-custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );

@@ -123,3 +123,140 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+(function () {
+  const cards    = Array.from(document.querySelectorAll('.vehicle-card'));
+  const overlay  = document.getElementById('vlOverlay');
+  const backdrop = document.getElementById('vlBackdrop');
+  const vlImg    = document.getElementById('vlImage');
+  const vlName   = document.getElementById('vlName');
+  const vlDesc   = document.getElementById('vlDesc');
+  const vlClose  = document.getElementById('vlClose');
+  const vlPrev   = document.getElementById('vlPrev');
+  const vlNext   = document.getElementById('vlNext');
+  const vlCurrent= document.getElementById('vlCurrent');
+  const vlTotal  = document.getElementById('vlTotal');
+
+  let current = 0;
+  vlTotal.textContent = cards.length;
+
+  function open(index) {
+    current = index;
+    update();
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function update() {
+    const card = cards[current];
+    const img  = card.dataset.img;
+    const name = card.dataset.name;
+    const desc = card.dataset.desc;
+
+    vlImg.classList.add('loading');
+    vlImg.alt  = name;
+    vlName.textContent = name;
+    vlDesc.textContent = desc;
+    vlCurrent.textContent = current + 1;
+
+    const tmp = new Image();
+    tmp.onload = () => {
+      vlImg.src = img;
+      vlImg.classList.remove('loading');
+    };
+    tmp.src = img;
+  }
+
+  function prev() { current = (current - 1 + cards.length) % cards.length; update(); }
+  function next() { current = (current + 1) % cards.length; update(); }
+
+  cards.forEach((card, i) => card.addEventListener('click', () => open(i)));
+  vlClose.addEventListener('click', close);
+  backdrop.addEventListener('click', close);
+  vlPrev.addEventListener('click', prev);
+  vlNext.addEventListener('click', next);
+
+  /* Keyboard navigation */
+  document.addEventListener('keydown', e => {
+    if (!overlay.classList.contains('active')) return;
+    if (e.key === 'Escape')      close();
+    if (e.key === 'ArrowLeft')   prev();
+    if (e.key === 'ArrowRight')  next();
+  });
+})();
+
+(function () {
+  const track   = document.getElementById('sliderTrack');
+  const slides  = track.querySelectorAll('.slide');
+  const prevBtn = document.getElementById('sliderPrev');
+  const nextBtn = document.getElementById('sliderNext');
+  const dotsWrap= document.getElementById('sliderDots');
+
+  let current   = 0;
+  let autoTimer = null;
+  let startX    = 0;
+  let isDragging= false;
+
+  const total = slides.length;
+
+  /* Build dots */
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    d.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(d);
+  });
+
+  function getSlideWidth() {
+    return slides[0].offsetWidth + 20; /* width + gap */
+  }
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * getSlideWidth()}px)`;
+    dotsWrap.querySelectorAll('.slider-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  nextBtn.addEventListener('click', () => { next(); resetAuto(); });
+  prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
+
+  /* Auto-play */
+  function startAuto() { autoTimer = setInterval(next, 4000); }
+  function resetAuto()  { clearInterval(autoTimer); startAuto(); }
+  startAuto();
+
+  /* Pause on hover */
+  track.addEventListener('mouseenter', () => clearInterval(autoTimer));
+  track.addEventListener('mouseleave', startAuto);
+
+  /* Touch / drag swipe */
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend',   e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); resetAuto(); }
+  });
+
+  /* Mouse drag */
+  track.addEventListener('mousedown',  e => { startX = e.clientX; isDragging = true; });
+  track.addEventListener('mouseup',    e => {
+    if (!isDragging) return;
+    isDragging = false;
+    const diff = startX - e.clientX;
+    if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); resetAuto(); }
+  });
+  track.addEventListener('mouseleave', () => { isDragging = false; });
+
+  /* Recalc on resize */
+  window.addEventListener('resize', () => goTo(current));
+})();

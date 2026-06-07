@@ -1,0 +1,146 @@
+/* ============================================
+   TOUR & TRANSPORT SOLUTION — Responsive CSS
+   ============================================ */
+
+/* ─── Tablet (≤ 1024px) ─────────────────────── */
+@media (max-width: 1024px) {
+  :root { --section-pad: 80px 0; }
+  .container { padding: 0 28px; }
+
+  /* Hero */
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-right { align-items: flex-start; }
+  .hero-stats-grid { max-width: 100%; grid-template-columns: repeat(4,1fr); }
+  .hero::before { width: 35%; }
+
+  /* Services */
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .services-header { grid-template-columns: 1fr; gap: 20px; }
+  .services-header-right { text-align: left; }
+
+  /* Why us */
+  .why-us-content { grid-template-columns: 1fr; gap: 60px; }
+
+  /* Tours */
+  .tours-grid { grid-template-columns: 1fr 1fr; }
+  .tours-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+  /* Testimonials */
+  .testi-grid { grid-template-columns: 1fr 1fr; }
+  .testi-grid .testi-card:last-child { display: none; }
+
+  /* Process */
+  .process-steps { grid-template-columns: 1fr 1fr; gap: 40px 30px; }
+  .process-connector { display: none; }
+
+  /* Fleet */
+  .fleet-grid { grid-template-columns: 1fr 1fr; }
+
+  /* CTA */
+  .cta-banner-content { grid-template-columns: 1fr; gap: 30px; }
+  .cta-actions { flex-direction: row; align-items: flex-start; }
+
+  /* Blog */
+  .blog-layout { grid-template-columns: 1fr; }
+  .blog-sidebar { display: grid; grid-template-columns: 1fr 1fr; }
+  .blog-featured { grid-template-columns: 1fr; min-height: auto; }
+  .blog-feat-image { min-height: 240px; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+
+/* ─── Mobile (≤ 768px) ──────────────────────── */
+@media (max-width: 768px) {
+  :root { --section-pad: 60px 0; }
+  .container { padding: 0 20px; }
+
+  /* Header */
+  .header-topbar { display: none; }
+  .site-header { background: rgba(13,13,13,0.97); }
+  .main-nav {
+    display: none;
+    position: fixed;
+    top: 72px; left: 0; right: 0;
+    background: var(--black);
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 6px;
+    border-top: 2px solid var(--yellow);
+    z-index: 999;
+  }
+  .main-nav.open { display: flex; }
+  .nav-link {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    width: 100%;
+    font-size: 1rem;
+  }
+  .nav-link::after { display: none; }
+  .nav-cta { text-align: center; margin-top: 10px; }
+  .menu-toggle { display: flex; }
+
+  /* Hero */
+  .hero { padding-bottom: 60px; }
+  .hero::before { display: none; }
+  .hero-title { font-size: clamp(2.5rem, 9vw, 4rem); }
+  .hero-stats-grid { grid-template-columns: 1fr 1fr; }
+  .hero-badge { display: none; }
+  .hero-scroll { display: none; }
+
+  /* Services */
+  .services-grid { grid-template-columns: 1fr; }
+
+  /* Tours */
+  .tours-grid { grid-template-columns: 1fr; }
+  .tours-header { flex-direction: column; align-items: flex-start; gap: 14px; }
+
+  /* Process */
+  .process-steps { grid-template-columns: 1fr; gap: 36px; }
+
+  /* Fleet */
+  .fleet-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Testimonials */
+  .testi-grid { grid-template-columns: 1fr; }
+  .testi-grid .testi-card:last-child { display: block; }
+
+  /* Why us */
+  .why-right-grid { grid-template-columns: 1fr 1fr; }
+  .why-visual-card:nth-child(1) { grid-row: auto; }
+
+  /* CTA */
+  .cta-banner-content { grid-template-columns: 1fr; }
+  .cta-actions { flex-direction: column; align-items: stretch; }
+  .cta-actions .btn { justify-content: center; }
+
+  /* Blog */
+  .blog-sidebar { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
+
+  /* Section titles */
+  .section-title { font-size: clamp(1.9rem, 6vw, 2.6rem); }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
+  /* Buttons */
+  .btn { padding: 12px 24px; font-size: 0.8rem; }
+}
+
+/* ─── Small Mobile (≤ 480px) ────────────────── */
+@media (max-width: 480px) {
+  .hero-title { font-size: 2.2rem; }
+  .hero-stats-grid { grid-template-columns: 1fr 1fr; }
+  .fleet-grid { grid-template-columns: 1fr; }
+  .tour-card { max-width: 400px; margin: 0 auto; }
+  .blog-feat-info { padding: 24px; }
+  .blog-feat-title { font-size: 1.4rem; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+}
+
+@media print {
+  .site-header, .site-footer { display: none; }
+  .container { max-width: 100%; padding: 0; }
+}
