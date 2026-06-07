@@ -74,12 +74,12 @@
       </div>
 
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=900&q=80" alt="Sundarbans Mangrove Forest">
+        <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/sundarban-scaled.jpg" alt="Sundarbans Mangrove Forest">
         <div class="slide-caption"><span>🌿 Sundarbans</span></div>
       </div>
 
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Sylhet Tea Garden">
+        <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/tea-garden.jpeg" alt="Sylhet Tea Garden">
         <div class="slide-caption"><span>🍃 Sylhet Tea Gardens</span></div>
       </div>
 
@@ -89,34 +89,30 @@
       </div>
 
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=900&q=80" alt="Rangamati Lake">
+        <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/Rangamati-lake.jpg" alt="Rangamati Lake">
         <div class="slide-caption"><span>🏞 Rangamati Lake</span></div>
       </div>
 
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80" alt="Saint Martin Island">
+        <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/saint-martin.jpg" alt="Saint Martin Island">
         <div class="slide-caption"><span>🏝 Saint Martin Island</span></div>
       </div>
 
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=900&q=80" alt="Sajek Valley">
+        <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/sajek-velly-scaled.jpg" alt="Sajek Valley">
         <div class="slide-caption"><span>☁️ Sajek Valley</span></div>
       </div>
 
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=900&q=80" alt="Jaflong Sylhet">
+        <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/jaflong-sylhet.jpg" alt="Jaflong Sylhet">
         <div class="slide-caption"><span>💎 Jaflong, Sylhet</span></div>
       </div>
 
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=900&q=80" alt="Kuakata Sea Beach">
+        <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/kuakata-sea-beach-scaled.avif" alt="Kuakata Sea Beach">
         <div class="slide-caption"><span>🌅 Kuakata Sea Beach</span></div>
       </div>
 
-      <div class="slide">
-        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80" alt="Kaptai Lake Rangamati">
-        <div class="slide-caption"><span>⛵ Kaptai Lake</span></div>
-      </div>
 
     </div>
 
