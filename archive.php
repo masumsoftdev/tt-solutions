@@ -27,22 +27,16 @@ get_header(); ?>
       <p class="section-label">Stories &amp; Tips</p>
       <h1 class="section-title">
         <?php
-        // Show archive title: category name, tag name, date, author, etc.
+
         $archive_title = get_the_archive_title();
         // Wrap the last word (or split at colon for "Category: Foo") in <em>
-        if ( strpos( $archive_title, ': ' ) !== false ) {
-          $parts = explode( ': ', $archive_title, 2 );
-          echo esc_html( $parts[0] ) . ': <em>' . esc_html( $parts[1] ) . '</em>';
+        if ( $archive_title ) {
+          echo $archive_title;
         } else {
           echo 'The Travel <em>Journal</em>';
         }
         ?>
       </h1>
-      <?php if ( get_the_archive_description() ) : ?>
-        <p class="section-subtitle"><?php echo wp_kses_post( get_the_archive_description() ); ?></p>
-      <?php else : ?>
-        <p class="section-subtitle">Destination guides, travel tips, transport advice, and stories from the road — written by our team of expert travellers.</p>
-      <?php endif; ?>
     </div>
   </div>
 </section>

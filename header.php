@@ -39,8 +39,7 @@
     <div class="container">
       <div class="header-inner">
         <a href="index.html" class="site-logo">
-          <span class="logo-main">Tour &amp; Transport</span>
-          <span class="logo-sub">Solution — Your Journey, Our Commitment</span>
+          <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/logo.png" alt="Logo">
         </a>
         <nav class="main-nav" role="navigation" aria-label="Main navigation">
           <a href="index.html"       class="nav-link active">Home</a>

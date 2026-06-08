@@ -148,7 +148,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 80px;
   gap: 30px;
 }
 
@@ -1217,7 +1217,7 @@
 }
 .sidebar-post-title { font-size: 0.83rem; font-weight: 600; color: var(--dark); line-height: 1.4; margin-bottom: 4px; transition: color var(--transition); }
 .sidebar-post:hover .sidebar-post-title { color: var(--yellow-deep); }
-.sidebar-post-date { font-size: 0.72rem; color: var(--light-grey); }
+.sidebar-post-date { font-size: 0.72rem; color: var(--grey); }
 
 .sidebar-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .sidebar-tag {
@@ -1614,3 +1614,8 @@
   text-decoration: none;
 }
 .btn-sb-cta:hover { opacity: .85; }
+
+a.site-logo img {
+    max-width: 100px;
+    height: 80px;
+}
