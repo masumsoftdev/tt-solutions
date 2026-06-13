@@ -859,37 +859,6 @@ $author_id   = get_the_author_meta( 'ID' );
 
         </article>
 
-        <!-- Author Bio -->
-        <?php
-        $author_desc = get_the_author_meta( 'description' );
-        $author_name = get_the_author();
-        ?>
-        <div class="sp-author-bio">
-          <?php
-          $avatar_img = get_avatar( $author_id, 72 );
-          if ( $avatar_img ) {
-            // add class
-            echo str_replace( "class='avatar", "class='sp-author-bio-avatar", $avatar_img );
-          } else {
-            echo '<div class="sp-author-bio-avatar-placeholder">✍</div>';
-          }
-          ?>
-          <div>
-            <div class="sp-author-bio-name">
-              <a href="<?php echo esc_url( get_author_posts_url( $author_id ) ); ?>"
-                 style="text-decoration:none;color:inherit;">
-                <?php echo esc_html( $author_name ); ?>
-              </a>
-            </div>
-            <div class="sp-author-bio-role">Travel Writer</div>
-            <p class="sp-author-bio-desc">
-              <?php echo $author_desc
-                ? esc_html( $author_desc )
-                : esc_html( $author_name ) . ' is a travel writer and explorer with a passion for uncovering the hidden stories of South Asia.'; ?>
-            </p>
-          </div>
-        </div>
-
         <!-- Prev / Next Navigation -->
         <nav class="sp-post-nav" aria-label="Post navigation">
           <?php
