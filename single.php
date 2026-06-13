@@ -761,8 +761,7 @@ $author_id   = get_the_author_meta( 'ID' );
       <h1 class="sp-hero-title"><?php the_title(); ?></h1>
 
       <div class="sp-hero-meta">
-        <?php echo get_avatar( $author_id, 36, '', '', [ 'class' => 'sp-author-avatar' ] ); ?>
-        <span>By <a href="<?php echo esc_url( get_author_posts_url( $author_id ) ); ?>"><?php the_author(); ?></a></span>
+        <span>By Admin</span>
         <span class="sep">·</span>
         <span>📅 <?php echo get_the_date(); ?></span>
         <span class="sep">·</span>

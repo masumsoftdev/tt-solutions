@@ -200,6 +200,6 @@ get_header();
   </div>
 </section>
 
-<section class="cta-banner"><div class="container"><div class="cta-banner-content"><div><h2 class="cta-title">Inspired to Travel? Let's Plan Your Trip!</h2><p class="cta-sub">Our team is ready to turn your travel dreams into a well-organised, stress-free journey.</p></div><div class="cta-actions"><a href="contact.html" class="btn btn-black">Start Planning →</a><a href="tours.html" class="btn btn-outline-black">View Packages</a></div></div></div></section>
+<section class="cta-banner"><div class="container"><div class="cta-banner-content"><div><h2 class="cta-title">Inspired to Travel? Let's Plan Your Trip!</h2><p class="cta-sub">Our team is ready to turn your travel dreams into a well-organised, stress-free journey.</p></div><div class="cta-actions"><a href="tel:8801632221259" class="btn btn-black">Start Planning →</a><a href="https://wa.me/8801632221259" class="btn btn-outline-black">Ask Packages</a></div></div></div></section>
 
 <?php get_footer(); ?>

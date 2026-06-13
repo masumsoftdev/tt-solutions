@@ -125,69 +125,143 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 (function () {
-  const cards    = Array.from(document.querySelectorAll('.vehicle-card'));
-  const overlay  = document.getElementById('vlOverlay');
-  const backdrop = document.getElementById('vlBackdrop');
-  const vlImg    = document.getElementById('vlImage');
-  const vlName   = document.getElementById('vlName');
-  const vlDesc   = document.getElementById('vlDesc');
-  const vlClose  = document.getElementById('vlClose');
-  const vlPrev   = document.getElementById('vlPrev');
-  const vlNext   = document.getElementById('vlNext');
-  const vlCurrent= document.getElementById('vlCurrent');
-  const vlTotal  = document.getElementById('vlTotal');
 
-  let current = 0;
-  vlTotal.textContent = cards.length;
+    const cards = Array.from(
+        document.querySelectorAll('.vehicle-card')
+    );
 
-  function open(index) {
-    current = index;
-    update();
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
+    const overlay = document.getElementById('vlOverlay');
+    const backdrop = document.getElementById('vlBackdrop');
+    const vlImg = document.getElementById('vlImage');
+    const vlName = document.getElementById('vlName');
+    const vlDesc = document.getElementById('vlDesc');
+    const vlClose = document.getElementById('vlClose');
+    const vlThumbs = document.getElementById('vlThumbs');
 
-  function close() {
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
-  }
+    let currentVehicle = 0;
+    let currentImage = 0;
+    let galleryImages = [];
 
-  function update() {
-    const card = cards[current];
-    const img  = card.dataset.img;
-    const name = card.dataset.name;
-    const desc = card.dataset.desc;
 
-    vlImg.classList.add('loading');
-    vlImg.alt  = name;
-    vlName.textContent = name;
-    vlDesc.textContent = desc;
-    vlCurrent.textContent = current + 1;
+    function openModal(index) {
+        currentVehicle = index;
+        loadVehicle();
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
 
-    const tmp = new Image();
-    tmp.onload = () => {
-      vlImg.src = img;
-      vlImg.classList.remove('loading');
-    };
-    tmp.src = img;
-  }
+    function closeModal() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 
-  function prev() { current = (current - 1 + cards.length) % cards.length; update(); }
-  function next() { current = (current + 1) % cards.length; update(); }
+    function loadVehicle() {
 
-  cards.forEach((card, i) => card.addEventListener('click', () => open(i)));
-  vlClose.addEventListener('click', close);
-  backdrop.addEventListener('click', close);
-  vlPrev.addEventListener('click', prev);
-  vlNext.addEventListener('click', next);
+        const card = cards[currentVehicle];
 
-  /* Keyboard navigation */
-  document.addEventListener('keydown', e => {
-    if (!overlay.classList.contains('active')) return;
-    if (e.key === 'Escape')      close();
-    if (e.key === 'ArrowLeft')   prev();
-    if (e.key === 'ArrowRight')  next();
-  });
+        galleryImages = JSON.parse(
+            card.dataset.images || '[]'
+        );
+
+        currentImage = 0;
+
+        vlName.textContent = card.dataset.name;
+        vlDesc.textContent = card.dataset.desc;
+        renderGallery();
+    }
+
+    function renderGallery() {
+
+        if (!galleryImages.length) return;
+
+        vlImg.src = galleryImages[currentImage];
+
+        vlThumbs.innerHTML = '';
+
+        galleryImages.forEach((img, index) => {
+
+            const thumb = document.createElement('img');
+
+            thumb.src = img;
+            thumb.className = 'vl-thumb';
+
+            if (index === currentImage) {
+                thumb.classList.add('active');
+            }
+
+            thumb.addEventListener('click', () => {
+
+                currentImage = index;
+
+                vlImg.src = img;
+
+                document
+                    .querySelectorAll('.vl-thumb')
+                    .forEach(el => {
+                        el.classList.remove('active');
+                    });
+
+                thumb.classList.add('active');
+            });
+
+            vlThumbs.appendChild(thumb);
+        });
+    }
+
+    function prevVehicle() {
+
+        currentVehicle--;
+
+        if (currentVehicle < 0) {
+            currentVehicle = cards.length - 1;
+        }
+
+        loadVehicle();
+    }
+
+    function nextVehicle() {
+
+        currentVehicle++;
+
+        if (currentVehicle >= cards.length) {
+            currentVehicle = 0;
+        }
+
+        loadVehicle();
+    }
+
+    cards.forEach((card, index) => {
+
+        card.addEventListener('click', () => {
+            openModal(index);
+        });
+
+    });
+
+    vlClose.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+
+
+    document.addEventListener('keydown', e => {
+
+        if (!overlay.classList.contains('active')) {
+            return;
+        }
+
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+
+        if (e.key === 'ArrowLeft') {
+            prevVehicle();
+        }
+
+        if (e.key === 'ArrowRight') {
+            nextVehicle();
+        }
+
+    });
+
 })();
 
 (function () {

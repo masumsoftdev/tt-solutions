@@ -20,7 +20,7 @@ get_header();
 <!-- SERVICES DETAIL -->
 <section style="padding:var(--section-pad);background:var(--off-white);">
   <div class="container">
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
+    <div class="service-grid">
 
       <div class="service-card fade-in" style="border:1px solid rgba(0,0,0,0.07);border-radius:var(--radius-md);">
         <div class="service-num">01</div>
@@ -99,6 +99,6 @@ get_header();
 </section>
 
 <!-- CTA -->
-<section class="cta-banner"><div class="container"><div class="cta-banner-content"><div><h2 class="cta-title">Not Sure Which Service You Need?</h2><p class="cta-sub">Call us or send a message — our team will recommend the perfect solution for your journey.</p></div><div class="cta-actions"><a href="contact.html" class="btn btn-black">Get Free Quote</a><a href="tours.html" class="btn btn-outline-black">View Tour Packages</a></div></div></div></section>
+<section class="cta-banner"><div class="container"><div class="cta-banner-content"><div><h2 class="cta-title">Not Sure Which Service You Need?</h2><p class="cta-sub">Call us or send a message — our team will recommend the perfect solution for your journey.</p></div><div class="cta-actions"><a href="tel:8801632221259" class="btn btn-black">Call Now</a><a href="https://wa.me/8801632221259" class="btn btn-outline-black">Get a Free Quote</a></div></div></div></section>
 
 <?php get_footer(); ?>

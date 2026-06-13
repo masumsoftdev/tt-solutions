@@ -144,7 +144,7 @@
           <p class="section-subtitle">Comprehensive travel and transport solutions designed around your needs — every trip, every time.</p>
         </div>
         <div class="services-header-right">
-          <a href="services.html" class="btn btn-outline-black">View All Services →</a>
+          <a href="https://wa.me/8801632221259" class="btn btn-outline-black">Send Query →</a>
         </div>
       </div>
 
@@ -223,98 +223,101 @@
 
     <div class="vehicles-grid" id="vehiclesGrid">
 
-      <div class="vehicle-card fade-in" data-img="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=90" data-name="AC Tourist Bus" data-desc="Spacious, air-conditioned tourist coach — perfect for group tours and long-distance travel.">
-        <div class="vehicle-thumb">
-          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80" alt="AC Tourist Bus" loading="lazy">
-          <div class="vehicle-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
-        </div>
-        <div class="vehicle-info">
-          <h4 class="vehicle-name">AC Tourist Bus</h4>
-          <span class="vehicle-tag">Group Tours</span>
-        </div>
-      </div>
+      <div class="vehicle-card"
+          data-name="AC Tourist Bus"
+          data-desc="Spacious, air-conditioned tourist coach — perfect for group tours and long-distance travel."
+          data-images='[
+            "https://tourandtransportsolution.com/wp-content/uploads/2026/06/ac-big-bus.jpeg",
+            "https://tourandtransportsolution.com/wp-content/uploads/2026/06/ac-big-bus-2.jpeg",
+            "https://tourandtransportsolution.com/wp-content/uploads/2026/06/ac-big-bus-3.jpeg",
+            "https://tourandtransportsolution.com/wp-content/uploads/2026/06/big-seat-one.jpeg",
+            "https://tourandtransportsolution.com/wp-content/uploads/2026/06/big-seat-two.jpeg"
+          ]'>
 
-      <div class="vehicle-card fade-in fade-in-delay-1" data-img="https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?w=1200&q=90" data-name="Non-AC Bus" data-desc="Reliable non-AC buses for budget-friendly intercity and rural routes across Bangladesh.">
-        <div class="vehicle-thumb">
-          <img src="https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?w=600&q=80" alt="Non-AC Bus" loading="lazy">
-          <div class="vehicle-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
-        </div>
-        <div class="vehicle-info">
-          <h4 class="vehicle-name">Non-AC Bus</h4>
-          <span class="vehicle-tag">Budget Routes</span>
-        </div>
-      </div>
+          <div class="vehicle-thumb">
+              <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/ac-big-bus.jpeg"
+                  alt="AC Big Bus">
+          </div>
 
-      <div class="vehicle-card fade-in fade-in-delay-2" data-img="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&q=90" data-name="Hino Coach" data-desc="Premium Hino diesel coach with reclining seats — ideal for corporate travel and charter hire.">
-        <div class="vehicle-thumb">
-          <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80" alt="Hino Coach" loading="lazy">
-          <div class="vehicle-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
-        </div>
-        <div class="vehicle-info">
-          <h4 class="vehicle-name">Hino Coach</h4>
-          <span class="vehicle-tag">Charter & Corporate</span>
-        </div>
+          <div class="vehicle-info">
+              <h4 class="vehicle-name">AC Tourist Bus</h4>
+              <span class="vehicle-tag">More Info & Images</span>
+          </div>
       </div>
+      <div class="vehicle-card"
+          data-name="AC Tourist Bus"
+          data-desc="Spacious, air-conditioned tourist coach — perfect for group tours and long-distance travel."
+          data-images='[
+            "https://tourandtransportsolution.com/wp-content/uploads/2026/06/toyota.jpeg",
+            "https://images.unsplash.com/photo-1556122071-e404eaedb77f?w=1200&q=90",
+            "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1200&q=90",
+            "https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?w=1200&q=90"
+          ]'>
 
-      <div class="vehicle-card fade-in" data-img="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=1200&q=90" data-name="Toyota Hi-Ace" data-desc="Versatile Toyota Hi-Ace — perfect for small groups, airport transfers, and city tours.">
-        <div class="vehicle-thumb">
-          <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&q=80" alt="Toyota Hi-Ace" loading="lazy">
-          <div class="vehicle-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
-        </div>
-        <div class="vehicle-info">
-          <h4 class="vehicle-name">Toyota Hi-Ace</h4>
-          <span class="vehicle-tag">Airport & City</span>
-        </div>
+          <div class="vehicle-thumb">
+              <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/toyota.jpeg"
+                  alt="AC Tourist Bus">
+          </div>
+
+          <div class="vehicle-info">
+              <h4 class="vehicle-name">AC Tourist Bus</h4>
+              <span class="vehicle-tag">More Info & Images</span>
+          </div>
       </div>
+      <div class="vehicle-card"
+          data-name="AC Tourist Bus"
+          data-desc="Spacious, air-conditioned tourist coach — perfect for group tours and long-distance travel."
+          data-images='[
+            "https://tourandtransportsolution.com/wp-content/uploads/2026/06/non-ac.jpeg",
+            "https://tourandtransportsolution.com/wp-content/uploads/2026/06/no-ac-1.jpeg",
+            "https://tourandtransportsolution.com/wp-content/uploads/2026/06/no-seat-1.jpeg",
+            "https://tourandtransportsolution.com/wp-content/uploads/2026/06/no-ac-seat-2.jpeg"
+          ]'>
 
-      <div class="vehicle-card fade-in fade-in-delay-1" data-img="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=1200&q=90" data-name="Nissan Minibus" data-desc="Comfortable Nissan minibus for mid-size groups — school trips, family outings, and shuttle services.">
-        <div class="vehicle-thumb">
-          <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=600&q=80" alt="Nissan Minibus" loading="lazy">
-          <div class="vehicle-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
-        </div>
-        <div class="vehicle-info">
-          <h4 class="vehicle-name">Nissan Minibus</h4>
-          <span class="vehicle-tag">School & Family</span>
-        </div>
-      </div>
+          <div class="vehicle-thumb">
+              <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/non-ac.jpeg"
+                  alt="Non AC Bus">
+          </div>
 
-      <div class="vehicle-card fade-in fade-in-delay-2" data-img="https://images.unsplash.com/photo-1506015391300-4802dc74e1b5?w=1200&q=90" data-name="Luxury Sedan" data-desc="Executive sedan for VIP transfers, corporate pickups, and comfortable point-to-point travel.">
-        <div class="vehicle-thumb">
-          <img src="https://images.unsplash.com/photo-1506015391300-4802dc74e1b5?w=600&q=80" alt="Luxury Sedan" loading="lazy">
-          <div class="vehicle-overlay"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
-        </div>
-        <div class="vehicle-info">
-          <h4 class="vehicle-name">Luxury Sedan</h4>
-          <span class="vehicle-tag">VIP & Executive</span>
-        </div>
+          <div class="vehicle-info">
+              <h4 class="vehicle-name">Non AC Bus</h4>
+              <span class="vehicle-tag">More Info & Images</span>
+          </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- Lightbox Popup -->
-<div class="vl-overlay" id="vlOverlay" role="dialog" aria-modal="true" aria-label="Vehicle image viewer">
-  <div class="vl-backdrop" id="vlBackdrop"></div>
-  <div class="vl-box">
-    <button class="vl-close" id="vlClose" aria-label="Close">
-      <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-    </button>
-    <div class="vl-img-wrap">
-      <img src="" alt="" id="vlImage">
+<div class="vl-overlay" id="vlOverlay">
+
+    <div class="vl-backdrop" id="vlBackdrop"></div>
+
+    <div class="vl-modal">
+
+        <button class="vl-close" id="vlClose">&times;</button>
+
+        <div class="vl-image-wrap">
+            <img id="vlImage" src="" alt="">
+        </div>
+
+        <div class="vl-thumbs" id="vlThumbs"></div>
+
+        <div class="vl-content">
+            <h3 id="vlName"></h3>
+            <p id="vlDesc"></p>
+        </div>
+
+        <div class="vl-footer">
+
+            <span>
+                <a href="https://wa.me/8801632221259" class="btn btn-outline-black">Get a Free Quote</a>
+            </span>
+
+        </div>
+
     </div>
-    <div class="vl-caption">
-      <h3 id="vlName"></h3>
-      <p id="vlDesc"></p>
-    </div>
-    <button class="vl-nav vl-nav-prev" id="vlPrev" aria-label="Previous vehicle">
-      <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-    </button>
-    <button class="vl-nav vl-nav-next" id="vlNext" aria-label="Next vehicle">
-      <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-    </button>
-    <div class="vl-counter"><span id="vlCurrent">1</span> / <span id="vlTotal">6</span></div>
-  </div>
+
 </div>
 <!-- ══════════════ WHY US ══════════════ -->
 <section class="why-us">
@@ -392,64 +395,96 @@
           <p class="section-label">Travel Blog</p>
           <h2 class="section-title">Latest <em>Travel Stories</em></h2>
         </div>
-        <a href="blog.html" class="btn btn-outline-black">All Posts →</a>
+        <a href="/blogs/" class="btn btn-outline-black">All Posts →</a>
       </div>
 
-      <div class="tours-grid">
+     <div class="tours-grid">
 
-        <article class="tour-card fade-in">
-          <div class="tour-image">
-            <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=600&q=80" alt="Cox's Bazar Beach" style="width:100%;height:100%;object-fit:cover;">
-            <span class="tour-tag hot">Beach</span>
-          </div>
-          <div class="tour-info">
-            <div class="tour-meta">
-              <span><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Cox's Bazar</span>
-              <span><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>5 min read</span>
-            </div>
-            <h3 class="tour-name">Why Cox's Bazar Is Still Bangladesh's Favourite Escape</h3>
-            <p class="tour-desc">From golden sunrises on the world's longest beach to the serene shores of Saint Martin — here's why this destination never gets old.</p>
-            <div class="tour-footer">
-              <a href="blog-coxs-bazar.html" class="book-btn">Read More →</a>
-            </div>
-          </div>
-        </article>
+          <?php
+          $latest_posts = new WP_Query([
+              'post_type'      => 'post',
+              'posts_per_page' => 3,
+              'post_status'    => 'publish',
+          ]);
 
-        <article class="tour-card fade-in fade-in-delay-1">
-          <div class="tour-image">
-            <img src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=600&q=80" alt="Sundarbans Mangrove Forest" style="width:100%;height:100%;object-fit:cover;">
-            <span class="tour-tag new">Nature</span>
-          </div>
-          <div class="tour-info">
-            <div class="tour-meta">
-              <span><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Sundarbans</span>
-              <span><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>4 min read</span>
-            </div>
-            <h3 class="tour-name">Into the Sundarbans: A Journey Through the World's Largest Mangrove</h3>
-            <p class="tour-desc">Gliding through silent waterways, spotting Royal Bengal Tigers, and breathing in the raw wild — the Sundarbans is unlike anywhere else on Earth.</p>
-            <div class="tour-footer">
-              <a href="blog-sundarbans.html" class="book-btn">Read More →</a>
-            </div>
-          </div>
-        </article>
+          if ( $latest_posts->have_posts() ) :
 
-        <article class="tour-card fade-in fade-in-delay-2">
-          <div class="tour-image">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Sylhet Tea Gardens" style="width:100%;height:100%;object-fit:cover;">
-            <span class="tour-tag">Hills & Tea</span>
-          </div>
-          <div class="tour-info">
-            <div class="tour-meta">
-              <span><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Sylhet</span>
-              <span><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>6 min read</span>
-            </div>
-            <h3 class="tour-name">Sylhet's Tea Gardens: A Green Paradise Worth Every Step</h3>
-            <p class="tour-desc">Rolling hills draped in emerald tea leaves, the mystical Ratargul swamp forest, and the crystal-clear waters of Jaflong — Sylhet will steal your heart.</p>
-            <div class="tour-footer">
-              <a href="blog-sylhet.html" class="book-btn">Read More →</a>
-            </div>
-          </div>
-        </article>
+              $delay = 0;
+
+              while ( $latest_posts->have_posts() ) :
+                  $latest_posts->the_post();
+
+                  $delay_class = $delay ? 'fade-in-delay-' . $delay : '';
+          ?>
+                  <article class="tour-card fade-in <?php echo esc_attr( $delay_class ); ?>">
+                      
+                      <div class="tour-image">
+                          <a href="<?php the_permalink(); ?>">
+                              <?php if ( has_post_thumbnail() ) : ?>
+                                  <?php the_post_thumbnail( 'large', [
+                                      'style' => 'width:100%;height:100%;object-fit:cover;'
+                                  ] ); ?>
+                              <?php endif; ?>
+                          </a>
+
+                          <?php
+                          $category = get_the_category();
+                          if ( ! empty( $category ) ) :
+                          ?>
+                              <span class="tour-tag">
+                                  <?php echo esc_html( $category[0]->name ); ?>
+                              </span>
+                          <?php endif; ?>
+                      </div>
+
+                      <div class="tour-info">
+
+                          <div class="tour-meta">
+
+                              <?php
+                              $category = get_the_category();
+                              if ( ! empty( $category ) ) :
+                              ?>
+                                  <span>
+                                      <?php echo esc_html( $category[0]->name ); ?>
+                                  </span>
+                              <?php endif; ?>
+
+                              <span>
+                                  <?php echo ceil( str_word_count( wp_strip_all_tags( get_the_content() ) ) / 200 ); ?>
+                                  min read
+                              </span>
+
+                          </div>
+
+                          <h3 class="tour-name">
+                              <a href="<?php the_permalink(); ?>">
+                                  <?php the_title(); ?>
+                              </a>
+                          </h3>
+
+                          <p class="tour-desc">
+                              <?php echo wp_trim_words( get_the_excerpt(), 20 ); ?>
+                          </p>
+
+                          <div class="tour-footer">
+                              <a href="<?php the_permalink(); ?>" class="book-btn">
+                                  Read More →
+                              </a>
+                          </div>
+
+                      </div>
+
+                  </article>
+
+          <?php
+                  $delay++;
+              endwhile;
+
+              wp_reset_postdata();
+
+          endif;
+          ?>
 
       </div>
     </div>

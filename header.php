@@ -38,16 +38,15 @@
   <div class="header-main">
     <div class="container">
       <div class="header-inner">
-        <a href="index.html" class="site-logo">
+        <a href="/" class="site-logo">
           <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/logo.png" alt="Logo">
         </a>
         <nav class="main-nav" role="navigation" aria-label="Main navigation">
-          <a href="index.html"       class="nav-link active">Home</a>
-          <a href="services.html"    class="nav-link">Services</a>
-          <a href="tours.html"       class="nav-link">Tours</a>
-          <a href="fleet.html"       class="nav-link">Fleet</a>
-          <a href="blog.html"        class="nav-link">Blog</a>
-          <a href="contact.html"     class="nav-link nav-cta">Book Now</a>
+          <a href="/"       class="nav-link active">Home</a>
+          <a href="/services/"    class="nav-link">Services</a>
+          <a href="/blogs/"        class="nav-link">Blog</a>
+          <a href="/contact-us/"        class="nav-link">Contact Us</a>
+          <a href="https://wa.me/8801632221259"     class="nav-link nav-cta">Book Now</a>
         </nav>
         <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
