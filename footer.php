@@ -27,23 +27,19 @@
       <div>
         <h3 class="footer-heading">Quick Links</h3>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="tours.html">Tour Packages</a></li>
-          <li><a href="fleet.html">Our Fleet</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/blogs/">Blog</a></li>
+          <li><a href="/contact-us/">Contact Us</a></li>
         </ul>
       </div>
       <div>
         <h3 class="footer-heading">Our Services</h3>
         <ul class="footer-links">
-          <li><a href="services.html">Airport Transfers</a></li>
-          <li><a href="services.html">City Tours</a></li>
-          <li><a href="services.html">Charter Hire</a></li>
-          <li><a href="services.html">Corporate Travel</a></li>
-          <li><a href="services.html">International Tours</a></li>
-          <li><a href="services.html">Group Packages</a></li>
+          <li><a href="<?php echo home_url(  ). '#ourVehicles' ?>">Our Vehicles</a></li>
+          <li><a href="<?php echo home_url(  ). '#services' ?>">Our Services</a></li>
+          <li><a href="<?php echo home_url(  ). '#clientReviews' ?>">Client Reviews</a></li>
+          <li><a href="<?php echo home_url(  ). '#travelStories' ?>">Travel Stories</a></li>
         </ul>
       </div>
       <div>

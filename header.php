@@ -44,6 +44,7 @@
         <nav class="main-nav" role="navigation" aria-label="Main navigation">
           <a href="/"       class="nav-link active">Home</a>
           <a href="/services/"    class="nav-link">Services</a>
+          <a href="<?php echo home_url(  ). '#ourVehicles' ?>"    class="nav-link">Vehicles</a>
           <a href="/blogs/"        class="nav-link">Blog</a>
           <a href="/contact-us/"        class="nav-link">Contact Us</a>
           <a href="https://wa.me/8801632221259"     class="nav-link nav-cta">Book Now</a>

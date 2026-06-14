@@ -213,7 +213,7 @@
 </section>
 
 <!-- ══════════════ Vehicles ══════════════ -->
-<section class="vehicles">
+<section class="vehicles" id="ourVehicles">
   <div class="container">
     <div class="vehicles-header fade-in">
       <p class="section-label">Our Fleet</p>
@@ -387,7 +387,7 @@
 </section>
 
 <!-- ══════════════ FEATURED TOURS ══════════════ -->
-<section class="tours">
+<section class="tours" id="travelStories">
   <div class="container">
     <div class="tours-content">
       <div class="tours-header">
@@ -533,7 +533,7 @@
 </section>
 
 <!-- ══════════════ TESTIMONIALS ══════════════ -->
-<section class="testimonials">
+<section class="testimonials" id="clientReviews">
   <div class="container">
     <div class="testimonials-content">
       <div class="testimonials-header fade-in">
