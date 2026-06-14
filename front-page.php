@@ -225,7 +225,7 @@
 
       <div class="vehicle-card"
           data-name="AC Tourist Bus"
-          data-desc="Spacious, air-conditioned tourist coach — perfect for group tours and long-distance travel."
+          data-desc="Spacious, air-conditioned tourist coach with 36-40 seats — perfect for group tours and long-distance travel."
           data-images='[
             "https://tourandtransportsolution.com/wp-content/uploads/2026/06/ac-big-bus.jpeg",
             "https://tourandtransportsolution.com/wp-content/uploads/2026/06/ac-big-bus-2.jpeg",
@@ -245,8 +245,8 @@
           </div>
       </div>
       <div class="vehicle-card"
-          data-name="AC Tourist Bus"
-          data-desc="Spacious, air-conditioned tourist coach — perfect for group tours and long-distance travel."
+          data-name="AC Mini Bus"
+          data-desc="Air-conditioned premium minibus (Nissan/Toyota) 28 seats ( 21 adults and 7 babies ) offering smooth comfort and modern seating — perfect for group tours, airport transfers, and long-distance travel."
           data-images='[
             "https://tourandtransportsolution.com/wp-content/uploads/2026/06/toyota.jpeg",
             "https://images.unsplash.com/photo-1556122071-e404eaedb77f?w=1200&q=90",
@@ -256,17 +256,17 @@
 
           <div class="vehicle-thumb">
               <img src="https://tourandtransportsolution.com/wp-content/uploads/2026/06/toyota.jpeg"
-                  alt="AC Tourist Bus">
+                  alt="AC Mini Bus">
           </div>
 
           <div class="vehicle-info">
-              <h4 class="vehicle-name">AC Tourist Bus</h4>
+              <h4 class="vehicle-name">AC Mini Bus</h4>
               <span class="vehicle-tag">More Info & Images</span>
           </div>
       </div>
       <div class="vehicle-card"
-          data-name="AC Tourist Bus"
-          data-desc="Spacious, air-conditioned tourist coach — perfect for group tours and long-distance travel."
+          data-name="Non AC Bus"
+          data-desc="Spacious and comfortable tourist coach upto 45 seats with ample ventilation — ideal for group tours and long-distance travel."
           data-images='[
             "https://tourandtransportsolution.com/wp-content/uploads/2026/06/non-ac.jpeg",
             "https://tourandtransportsolution.com/wp-content/uploads/2026/06/no-ac-1.jpeg",

@@ -265,16 +265,19 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 (function () {
-  const track   = document.getElementById('sliderTrack');
-  const slides  = track.querySelectorAll('.slide');
+  const track = document.getElementById('sliderTrack');
+
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.slide');
   const prevBtn = document.getElementById('sliderPrev');
   const nextBtn = document.getElementById('sliderNext');
-  const dotsWrap= document.getElementById('sliderDots');
+  const dotsWrap = document.getElementById('sliderDots');
 
-  let current   = 0;
+  let current = 0;
   let autoTimer = null;
-  let startX    = 0;
-  let isDragging= false;
+  let startX = 0;
+  let isDragging = false;
 
   const total = slides.length;
 
@@ -283,54 +286,121 @@ document.addEventListener('DOMContentLoaded', () => {
     const d = document.createElement('button');
     d.className = 'slider-dot' + (i === 0 ? ' active' : '');
     d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-    d.addEventListener('click', () => goTo(i));
+    d.addEventListener('click', () => {
+      goTo(i);
+      resetAuto();
+    });
     dotsWrap.appendChild(d);
   });
 
   function getSlideWidth() {
-    return slides[0].offsetWidth + 20; /* width + gap */
+    const gap = parseInt(getComputedStyle(track).gap) || 0;
+    return slides[0].offsetWidth + gap;
   }
 
-  function goTo(index) {
-    current = (index + total) % total;
-    track.style.transform = `translateX(-${current * getSlideWidth()}px)`;
+  function updateDots() {
     dotsWrap.querySelectorAll('.slider-dot').forEach((d, i) => {
       d.classList.toggle('active', i === current);
     });
   }
 
-  function next() { goTo(current + 1); }
-  function prev() { goTo(current - 1); }
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * getSlideWidth()}px)`;
+    updateDots();
+  }
 
-  nextBtn.addEventListener('click', () => { next(); resetAuto(); });
-  prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
+  function next() {
+    goTo(current + 1);
+  }
+
+  function prev() {
+    goTo(current - 1);
+  }
+
+  /* Buttons */
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      next();
+      resetAuto();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prev();
+      resetAuto();
+    });
+  }
 
   /* Auto-play */
-  function startAuto() { autoTimer = setInterval(next, 4000); }
-  function resetAuto()  { clearInterval(autoTimer); startAuto(); }
-  startAuto();
+  function startAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(next, 4000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoTimer);
+  }
+
+  function resetAuto() {
+    stopAuto();
+    startAuto();
+  }
 
   /* Pause on hover */
-  track.addEventListener('mouseenter', () => clearInterval(autoTimer));
+  track.addEventListener('mouseenter', stopAuto);
   track.addEventListener('mouseleave', startAuto);
 
-  /* Touch / drag swipe */
-  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-  track.addEventListener('touchend',   e => {
+  /* Touch swipe */
+  track.addEventListener(
+    'touchstart',
+    (e) => {
+      startX = e.touches[0].clientX;
+    },
+    { passive: true }
+  );
+
+  track.addEventListener('touchend', (e) => {
     const diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); resetAuto(); }
+
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? next() : prev();
+      resetAuto();
+    }
   });
 
   /* Mouse drag */
-  track.addEventListener('mousedown',  e => { startX = e.clientX; isDragging = true; });
-  track.addEventListener('mouseup',    e => {
-    if (!isDragging) return;
-    isDragging = false;
-    const diff = startX - e.clientX;
-    if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); resetAuto(); }
+  track.addEventListener('mousedown', (e) => {
+    startX = e.clientX;
+    isDragging = true;
   });
-  track.addEventListener('mouseleave', () => { isDragging = false; });
 
-  /* Recalc on resize */
-  window.addEventListener('resize', () => goTo(current));
+  track.addEventListener('mouseup', (e) => {
+    if (!isDragging) return;
+
+    isDragging = false;
+
+    const diff = startX - e.clientX;
+
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? next() : prev();
+      resetAuto();
+    }
+  });
+
+  track.addEventListener('mouseleave', () => {
+    isDragging = false;
+  });
+
+  /* Recalculate position on resize */
+  window.addEventListener('resize', () => {
+    goTo(current);
+  });
+
+  /* Wait until all images/resources are loaded */
+  window.addEventListener('load', () => {
+    goTo(1);      // Ensure first slide is positioned correctly
+    startAuto();  // Start autoplay after page fully loads
+  });
 })();

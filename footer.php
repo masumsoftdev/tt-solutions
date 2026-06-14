@@ -36,8 +36,8 @@
       <div>
         <h3 class="footer-heading">Our Services</h3>
         <ul class="footer-links">
-          <li><a href="<?php echo home_url(  ). '#ourVehicles' ?>">Our Vehicles</a></li>
-          <li><a href="<?php echo home_url(  ). '#services' ?>">Our Services</a></li>
+          <li><a href="<?php echo home_url(  ). '#ourVehicles' ?>">Vehicles We Have</a></li>
+          <li><a href="<?php echo home_url(  ). '#services' ?>">Services We Offer</a></li>
           <li><a href="<?php echo home_url(  ). '#clientReviews' ?>">Client Reviews</a></li>
           <li><a href="<?php echo home_url(  ). '#travelStories' ?>">Travel Stories</a></li>
         </ul>
